@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miguel A. Jesús — Data, AI & Public Sector</title>
+  <title data-i18n="meta.title">Miguel A. Jesús — Data, AI & Public Sector</title>
   <meta name="description" content="Portfolio of Miguel A. Jesús — Data analyst and evaluation specialist applying AI and quantitative methods to integrity, justice, and development.">
   <meta property="og:title" content="Miguel A. Jesús — Data, AI & Public Sector">
   <meta property="og:description" content="Impact evaluations, MERL, applied AI, and data products for public value.">
@@ -15,16 +15,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="bg"></canvas>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
   <header class="container">
     <nav class="nav">
-      <a class="brand" href="#"><span class="dot"></span> Miguel A. Jesús</a>
-      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
-      <a class="btn" href="assets/docs/Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="brand" href="#"><span class="dot"></span> <span data-i18n="brand">Miguel A. Jesús</span></a>
+      <div class="nav-actions">
+        <button id="langToggle" class="icon" aria-label="Cambiar idioma / Change language">EN</button>
+        <button id="themeToggle" class="icon" aria-label="Toggle theme">🌙</button>
+        <a class="btn" href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener" data-i18n="actions.cv">Download CV</a>
+      </div>
     </nav>
   </header>
 
@@ -32,34 +35,34 @@
     <!-- Hero -->
     <section class="hero" id="home" aria-labelledby="intro-title">
       <div class="hero-text">
-        <h1 id="intro-title">Data & AI for Public Value</h1>
+        <h1 id="intro-title" data-i18n="hero.title">Data & AI for Public Value</h1>
         <p class="lead">
-          I build data products and evaluation systems for integrity, justice, and development.
+          <span data-i18n="hero.lead">I build data products and evaluation systems for integrity, justice, and development.</span>
           <span class="typed" aria-live="polite"></span>
         </p>
         <div class="quick">
-          <a class="btn primary" href="#experience">Experience</a>
-          <a class="btn" href="#projects">Writing</a>
-          <a class="btn outline" href="#contact">Contact</a>
+          <a class="btn primary" href="#experience" data-i18n="hero.cta1">Experience</a>
+          <a class="btn" href="#projects" data-i18n="hero.cta2">Writing</a>
+          <a class="btn outline" href="#contact" data-i18n="hero.cta3">Contact</a>
         </div>
         <ul class="meta">
-          <li>📍 Lima, Peru</li>
+          <li>📍 <span data-i18n="meta.location">Lima, Peru</span></li>
           <li>✉️ <a href="mailto:miguel.jesus.cor@gmail.com">miguel.jesus.cor@gmail.com</a></li>
           <li>🔗 <a href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">linktr.ee/mique.jesus</a></li>
         </ul>
       </div>
       <div class="hero-card" role="img" aria-label="Data network visualization">
         <div class="card">
-          <h3>Focus Areas</h3>
+          <h3 data-i18n="focus.title">Focus Areas</h3>
           <ul>
-            <li>Impact Evaluation & MERL</li>
-            <li>Applied AI & Analytics</li>
-            <li>Public Integrity & Justice</li>
-            <li>Data Visualization</li>
+            <li data-i18n="focus.a">Impact Evaluation & MERL</li>
+            <li data-i18n="focus.b">Applied AI & Analytics</li>
+            <li data-i18n="focus.c">Public Integrity & Justice</li>
+            <li data-i18n="focus.d">Data Visualization</li>
           </ul>
         </div>
         <div class="card">
-          <h3>Toolbox</h3>
+          <h3 data-i18n="toolbox.title">Toolbox</h3>
           <ul class="tags">
             <li>Python</li><li>R</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>SPSS</li><li>VBA</li>
           </ul>
@@ -69,91 +72,91 @@
 
     <!-- Experience -->
     <section id="experience" class="section">
-      <h2>Experience</h2>
+      <h2 data-i18n="exp.title">Experience</h2>
       <div class="timeline">
         <article class="item">
-          <div class="time">2024–Now</div>
+          <div class="time">2024–<span data-i18n="now">Now</span></div>
           <div class="content">
-            <h3>Senior Consultant — Public Prosecutor's Office (Peru)</h3>
+            <h3 data-i18n="exp.1.role">Senior Consultant — Public Prosecutor's Office (Peru)</h3>
             <ul>
-              <li>Designed and implemented evaluation methodologies, including AI to improve performance measurement for 5,000+ prosecutorial staff nationwide.</li>
-              <li>Built performance evaluation systems for the General Secretariat administrative staff.</li>
-              <li>Led CICME interdepartmental coordination on data management and dissemination for justice services.</li>
+              <li data-i18n="exp.1.a">Designed and implemented evaluation methodologies, including AI to improve performance measurement for 5,000+ prosecutorial staff nationwide.</li>
+              <li data-i18n="exp.1.b">Built performance evaluation systems for the General Secretariat administrative staff.</li>
+              <li data-i18n="exp.1.c">Led CICME interdepartmental coordination on data management and dissemination for justice services.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2024</div>
           <div class="content">
-            <h3>Integrity Specialist — USAID / Chemonics</h3>
+            <h3 data-i18n="exp.2.role">Integrity Specialist — USAID / Chemonics</h3>
             <ul>
-              <li>Supported implementation of the Public Integrity Model and evaluated via the Preventive Capacity Index.</li>
-              <li>Designed quant & qual instruments for the Transparent Public Investment (TPI) project.</li>
-              <li>Co-authored technical guides, reports, and methodologies for regional partners.</li>
+              <li data-i18n="exp.2.a">Supported implementation of the Public Integrity Model and evaluated via the Preventive Capacity Index.</li>
+              <li data-i18n="exp.2.b">Designed quant & qual instruments for the Transparent Public Investment (TPI) project.</li>
+              <li data-i18n="exp.2.c">Co-authored technical guides, reports, and methodologies for regional partners.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2021–2023</div>
           <div class="content">
-            <h3>Technical Specialist — Judicial Branch (Peru)</h3>
+            <h3 data-i18n="exp.3.role">Technical Specialist — Judicial Branch (Peru)</h3>
             <ul>
-              <li>Produced statistical productivity/efficiency reports; identified improvements in 60%+ of courts.</li>
-              <li>Developed quantitative methodologies; groundwork for non-jurisdictional performance evaluation.</li>
-              <li>Led a Tech Innovation Lab; 80% delivery of software/app initiatives.</li>
-              <li>Pushed upgrades to the Project Registration & Tracking System; 75% of proposals adopted.</li>
+              <li data-i18n="exp.3.a">Produced statistical productivity/efficiency reports; identified improvements in 60%+ of courts.</li>
+              <li data-i18n="exp.3.b">Developed quantitative methodologies; groundwork for non-jurisdictional performance evaluation.</li>
+              <li data-i18n="exp.3.c">Led a Tech Innovation Lab; 80% delivery of software/app initiatives.</li>
+              <li data-i18n="exp.3.d">Pushed upgrades to the Project Registration & Tracking System; 75% of proposals adopted.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2017–2021</div>
           <div class="content">
-            <h3>Quantitative Consultant — Presidency of the Council of Ministers (Peru)</h3>
+            <h3 data-i18n="exp.4.role">Quantitative Consultant — Presidency of the Council of Ministers (Peru)</h3>
             <ul>
-              <li>Analyzed monthly data from 100+ entities for National Integrity Policy compliance.</li>
-              <li>Built Tableau dashboards reaching 300+ users.</li>
-              <li>Co-developed Preventive Capacity Index methodology and a national web tool (100% deployed).</li>
-              <li>Audited the national SQL database on Sworn Statements; proposed data-quality actions.</li>
+              <li data-i18n="exp.4.a">Analyzed monthly data from 100+ entities for National Integrity Policy compliance.</li>
+              <li data-i18n="exp.4.b">Built Tableau dashboards reaching 300+ users.</li>
+              <li data-i18n="exp.4.c">Co-developed Preventive Capacity Index methodology and a national web tool (100% deployed).</li>
+              <li data-i18n="exp.4.d">Audited the national SQL database on Sworn Statements; proposed data-quality actions.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2019</div>
           <div class="content">
-            <h3>Technical Analyst — Presidency of the Council of Ministers (Peru)</h3>
+            <h3 data-i18n="exp.5.role">Technical Analyst — Presidency of the Council of Ministers (Peru)</h3>
             <ul>
-              <li>Produced statistical reports on investment budget transfers for ministers and governors.</li>
-              <li>Automated consistency checks with VBA for reporting pipelines.</li>
+              <li data-i18n="exp.5.a">Produced statistical reports on investment budget transfers for ministers and governors.</li>
+              <li data-i18n="exp.5.b">Automated consistency checks with VBA for reporting pipelines.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2018</div>
           <div class="content">
-            <h3>Quantitative Consultant — Ministry of Labor and Employment Promotion</h3>
+            <h3 data-i18n="exp.6.role">Quantitative Consultant — Ministry of Labor and Employment Promotion</h3>
             <ul>
-              <li>Optimized audit mobility scheduling with geospatial analysis (+15% audits; significant fuel savings).</li>
-              <li>Identified procurement cost overruns (>US$100k savings).</li>
+              <li data-i18n="exp.6.a">Optimized audit mobility scheduling with geospatial analysis (+15% audits; significant fuel savings).</li>
+              <li data-i18n="exp.6.b">Identified procurement cost overruns (>US$100k savings).</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2016–2017</div>
           <div class="content">
-            <h3>Research Assistant — IMA GO!</h3>
+            <h3 data-i18n="exp.7.role">Research Assistant — IMA GO!</h3>
             <ul>
-              <li>Led a 20+ team for market study surveys and sped up data entry by 20%.</li>
+              <li data-i18n="exp.7.a">Led a 20+ team for market study surveys and sped up data entry by 20%.</li>
             </ul>
           </div>
         </article>
         <article class="item">
           <div class="time">2014–2016</div>
           <div class="content">
-            <h3>Programs & Projects Assistant — NDI (Washington, D.C.)</h3>
+            <h3 data-i18n="exp.8.role">Programs & Projects Assistant — NDI (Washington, D.C.)</h3>
             <ul>
-              <li>Supported training programs for political organizations and vulnerable populations across the Andes.</li>
-              <li>Built statistical evaluations that lifted participant satisfaction by 25%.</li>
-              <li>Facilitated cooperation projects with government agencies and civil society.</li>
+              <li data-i18n="exp.8.a">Supported training programs for political organizations and vulnerable populations across the Andes.</li>
+              <li data-i18n="exp.8.b">Built statistical evaluations that lifted participant satisfaction by 25%.</li>
+              <li data-i18n="exp.8.c">Facilitated cooperation projects with government agencies and civil society.</li>
             </ul>
           </div>
         </article>
@@ -162,34 +165,34 @@
 
     <!-- Education & Certifications -->
     <section class="section" id="education">
-      <h2>Education</h2>
+      <h2 data-i18n="edu.title">Education</h2>
       <div class="cards">
         <div class="card">
-          <h3>Master in Data Management & Analysis (in process)</h3>
-          <p>University of Buenos Aires (UBA), 2023–2025</p>
-          <p>Econometrics, data mining, AI, and advanced data management in organizations.</p>
+          <h3 data-i18n="edu.1.title">Master in Data Management & Analysis (in process)</h3>
+          <p data-i18n="edu.1.inst">University of Buenos Aires (UBA), 2023–2025</p>
+          <p data-i18n="edu.1.desc">Econometrics, data mining, AI, and advanced data management in organizations.</p>
         </div>
         <div class="card">
-          <h3>Diploma in Applied Statistics</h3>
-          <p>Pontifical Catholic University of Peru (PUCP), 2017–2018</p>
+          <h3 data-i18n="edu.2.title">Diploma in Applied Statistics</h3>
+          <p data-i18n="edu.2.inst">Pontifical Catholic University of Peru (PUCP), 2017–2018</p>
         </div>
         <div class="card">
-          <h3>Bachelor in Political Science</h3>
-          <p>National University of San Marcos (UNMSM), 2011–2016</p>
-          <p>Quantitative profile; thesis graded outstanding.</p>
+          <h3 data-i18n="edu.3.title">Bachelor in Political Science</h3>
+          <p data-i18n="edu.3.inst">National University of San Marcos (UNMSM), 2011–2016</p>
+          <p data-i18n="edu.3.desc">Quantitative profile; thesis graded outstanding.</p>
         </div>
       </div>
 
-      <h2>Certifications</h2>
+      <h2 data-i18n="certs.title">Certifications</h2>
       <ul class="tags">
-        <li>IBM Data Science Professional (2023)</li>
-        <li>IELTS Academic (British Council, 2023)</li>
+        <li data-i18n="certs.1">IBM Data Science Professional (2023)</li>
+        <li data-i18n="certs.2">IELTS Academic (British Council, 2023)</li>
       </ul>
     </section>
 
     <!-- Skills -->
     <section class="section" id="skills">
-      <h2>Skills</h2>
+      <h2 data-i18n="skills.title">Skills</h2>
       <div class="grid skills">
         <div class="skill"><span>Python</span></div>
         <div class="skill"><span>R</span></div>
@@ -201,48 +204,48 @@
         <div class="skill"><span>VBA</span></div>
         <div class="skill"><span>Excel</span></div>
         <div class="skill"><span>Atlas.ti</span></div>
-        <div class="skill"><span>Prompt Engineering</span></div>
+        <div class="skill"><span data-i18n="skills.prompt">Prompt Engineering</span></div>
         <div class="skill"><span>LLMs</span></div>
         <div class="skill"><span>KoboToolbox</span></div>
       </div>
-      <p class="muted">Languages: Spanish (native), English (advanced), Portuguese (basic).</p>
+      <p class="muted" data-i18n="skills.langs">Languages: Spanish (native), English (advanced), Portuguese (basic).</p>
     </section>
 
     <!-- Publications & Writing -->
     <section class="section" id="projects">
-      <h2>Selected Writings</h2>
+      <h2 data-i18n="writing.title">Selected Writings</h2>
       <ul class="list">
-        <li>Beyond Ideology: Classifying Congressional Votes with Linear Discriminant Analysis (LDA)</li>
-        <li>Linear or Platform: Unraveling the OpenAI Business Model</li>
-        <li>Working with SQLite Databases in Python</li>
+        <li data-i18n="writing.1">Beyond Ideology: Classifying Congressional Votes with Linear Discriminant Analysis (LDA)</li>
+        <li data-i18n="writing.2">Linear or Platform: Unraveling the OpenAI Business Model</li>
+        <li data-i18n="writing.3">Working with SQLite Databases in Python</li>
       </ul>
-      <p class="muted">More on <a href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">linktr.ee/mique.jesus</a>.</p>
+      <p class="muted"><span data-i18n="writing.more">More on</span> <a href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">linktr.ee/mique.jesus</a>.</p>
     </section>
 
     <!-- Teaching -->
     <section class="section" id="teaching">
-      <h2>Teaching</h2>
+      <h2 data-i18n="teach.title">Teaching</h2>
       <ul class="list">
-        <li>Lecturer — UNMSM (Mar–Apr 2025): Indicators in Public Policy; AI in Public Policy.</li>
-        <li>Instructor — Periférica Academy (2018): Statistics & Research Methods (PUCP freshmen).</li>
-        <li>Teaching Assistant — UNMSM (2017): Project Programming, practice sessions.</li>
+        <li data-i18n="teach.1">Lecturer — UNMSM (Mar–Apr 2025): Indicators in Public Policy; AI in Public Policy.</li>
+        <li data-i18n="teach.2">Instructor — Periférica Academy (2018): Statistics & Research Methods (PUCP freshmen).</li>
+        <li data-i18n="teach.3">Teaching Assistant — UNMSM (2017): Project Programming, practice sessions.</li>
       </ul>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <h2 data-i18n="contact.title">Contact</h2>
       <div class="contact">
-        <a class="btn primary" href="mailto:miguel.jesus.cor@gmail.com">Email me</a>
-        <a class="btn outline" href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">All links</a>
+        <a class="btn primary" href="mailto:miguel.jesus.cor@gmail.com" data-i18n="contact.cta">Email me</a>
+        <a class="btn outline" href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener" data-i18n="contact.links">All links</a>
       </div>
     </section>
 
     <footer class="container footer">
-      <p>© <span id="year"></span> Miguel A. Jesús — Built with HTML, CSS & JavaScript. Hosted on GitHub Pages.</p>
+      <p>© <span id="year"></span> <span data-i18n="brand">Miguel A. Jesús</span> — <span data-i18n="footer">Built with HTML, CSS & JavaScript. Hosted on GitHub Pages.</span></p>
     </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
