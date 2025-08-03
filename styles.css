@@ -26,6 +26,8 @@ body{
 .brand{display:flex;align-items:center;gap:.6rem;color:var(--text);text-decoration:none;font-weight:700}
 .brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(45deg,var(--accent),var(--accent-2));box-shadow:0 0 12px var(--accent)}
 .nav .btn{margin-left:auto}
+.nav-actions{display:flex;align-items:center;gap:.5rem}
+.icon{border:1px solid #243244;background:#0f172a;color:var(--text);border-radius:.6rem;padding:.45rem .6rem;cursor:pointer}
 
 .btn{
   display:inline-flex;align-items:center;gap:.5rem;
@@ -86,9 +88,10 @@ h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 .6rem}
 .footer{padding:2rem 0 4rem;color:var(--muted);text-align:center}
 
 /* Light theme */
-.light body{background: #f8fafc;color:#0f172a}
-.light .btn{background:#fff;border-color:#e5e7eb;color:#0f172a}
-.light .btn.outline{background:transparent;border-color:#cbd5e1}
-.light .card{background:#ffffff;border-color:#e5e7eb}
-.light .tags li,.light .item .content,.light .skill{background:#fff;border-color:#e5e7eb}
-.light .timeline{border-color:#e5e7eb}
+:root.light{
+  --bg:#f8fafc;
+  --card:#ffffff;
+  --text:#0f172a;
+  --muted:#475569;
+  --ring:rgba(2,6,23,.12);
+}
