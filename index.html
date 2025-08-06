@@ -2,159 +2,216 @@
 <html lang="en">
 <head>
   <!--
-    Inspired by Brittany Chiang v4 (MIT): https://github.com/bchiang7/v4
-    This static adaptation keeps the visual language (colors, spacing, layout)
-    without Gatsby or styled-components.
+    Layout & visual language inspired by Brittany Chiang v4 (MIT):
+    https://github.com/bchiang7/v4  – License: MIT.
   -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Miguel A. Jesús Correa — Data & AI</title>
-  <meta name="description" content="Data & AI for public value — portfolio of Miguel A. Jesús.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Headings/body similar to Brittany v4: geometric sans + mono -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miguel A. Jesús — Data & AI</title>
+  <meta name="description" content="Data & AI for public value — Miguel A. Jesús." />
+
+  <!-- fonts (libres) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="layout">
-    <!-- Sidebar (sticky) -->
-    <aside class="sidebar">
-      <header>
-        <a class="logo" href="#top">Miguel A. Jesús</a>
-        <h1 class="tagline">Data & AI for Public Value</h1>
-        <p class="blurb">
-          Analyst & evaluation specialist applying <span class="mono">ML/XAI</span> to integrity,
-          justice & development. Building reliable data systems and actionable insights.
-        </p>
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <!-- Social (left) -->
+  <aside class="side left" aria-label="Social links">
+    <ul>
+      <li><a href="https://github.com/Mique-Jesus" target="_blank" aria-label="GitHub" rel="noopener" title="GitHub">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.8-2.7-.3-5.5-1.4-5.5-6.1 0-1.4.5-2.6 1.3-3.5-.2-.3-.6-1.6.1-3.2 0 0 1.1-.4 3.6 1.3a12.3 12.3 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.6.3 2.9.1 3.2.9.9 1.3 2.1 1.3 3.5 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5z"/></svg>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/migueljesuscor" target="_blank" aria-label="LinkedIn" rel="noopener" title="LinkedIn">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM14.5 9c-2.1 0-3.5 1.3-3.5 3.3V21h4v-6.2c0-1.2.8-2 2-2s1.9.8 1.9 2V21h4v-6.6C22.9 10.7 21 9 18.7 9c-1.3 0-2.4.5-3.2 1.5V9h-1z"/></svg>
+      </a></li>
+      <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter" rel="noopener" title="Twitter">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69a4.17 4.17 0 0 0 1.83-2.3 8.27 8.27 0 0 1-2.64 1.01A4.14 4.14 0 0 0 12 8.15a11.76 11.76 0 0 1-8.54-4.33 4.13 4.13 0 0 0 1.28 5.53 4.1 4.1 0 0 1-1.87-.52v.05c0 2 1.44 3.71 3.36 4.1a4.2 4.2 0 0 1-1.86.07 4.15 4.15 0 0 0 3.87 2.88A8.3 8.3 0 0 1 2 18.6a11.73 11.73 0 0 0 6.36 1.86c7.64 0 11.82-6.33 11.82-11.82v-.54A8.4 8.4 0 0 0 22.46 6z"/></svg>
+      </a></li>
+      <li><a href="mailto:miguel.jesus.cor@gmail.com" aria-label="Email" title="Email">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+      </a></li>
+    </ul>
+  </aside>
 
-        <div class="actions">
-          <a class="btn" href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Download CV</a>
-          <div class="social">
-            <a class="icon" href="https://www.linkedin.com/in/migueljesuscor" target="_blank" aria-label="LinkedIn" rel="noopener">
-              <!-- LinkedIn SVG -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM14.5 9c-2.1 0-3.5 1.3-3.5 3.3V21h4v-6.2c0-1.2.8-2 2-2s1.9.8 1.9 2V21h4v-6.6C22.9 10.7 21 9 18.7 9c-1.3 0-2.4.5-3.2 1.5V9h-1z"/></svg>
-            </a>
-            <a class="icon" href="https://github.com/Mique-Jesus" target="_blank" aria-label="GitHub" rel="noopener">
-              <!-- GitHub SVG -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.8-2.7-.3-5.5-1.4-5.5-6.1 0-1.4.5-2.6 1.3-3.5-.2-.3-.6-1.6.1-3.2 0 0 1.1-.4 3.6 1.3a12.3 12.3 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.6.3 2.9.1 3.2.9.9 1.3 2.1 1.3 3.5 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5z"/></svg>
-            </a>
-            <a class="icon" href="mailto:miguel.jesus.cor@gmail.com" aria-label="Email">
-              <!-- Mail SVG -->
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
-            </a>
-          </div>
+  <!-- Email (right) -->
+  <aside class="side right"><a href="mailto:miguel.jesus.cor@gmail.com">miguel.jesus.cor@gmail.com</a></aside>
+
+  <!-- Header -->
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="hex">M</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="#about"><span class="num">01.</span> About</a>
+      <a href="#experience"><span class="num">02.</span> Experience</a>
+      <a href="#work"><span class="num">03.</span> Work</a>
+      <a href="#contact"><span class="num">04.</span> Contact</a>
+      <a class="btn" href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </header>
+
+  <main id="top" class="wrap">
+    <!-- Hero -->
+    <section class="hero" aria-label="Intro">
+      <p class="pre">Hi, my name is</p>
+      <h1 class="title">Miguel A. Jesús.</h1>
+      <h2 class="subtitle">I build data & AI things for the public good.</h2>
+      <p class="lead">
+        I’m a data analyst & evaluation specialist focused on integrity, justice, and development.
+        I design MERL systems, causal evaluations, and data products with <span class="mono">Python/R/SQL</span> and XAI.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#work">Check my work</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2 class="section-title"><span>01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Currently collaborating with the Peruvian Public Prosecutor’s Office on performance measurement. Previously with USAID/Chemonics, the Judicial Branch, and the PCM.</p>
+          <p>Interested in explainable AI for policy, impact evaluation, and trustworthy data systems.</p>
+          <ul class="skills">
+            <li>Python</li><li>R</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>SPSS</li>
+          </ul>
+        </div>
+        <div class="about-photo">
+          <!-- coloca un me.jpg en la raíz para que se vea -->
+          <img src="me.jpg" alt="Miguel A. Jesús" onerror="this.closest('.about-photo').classList.add('placeholder'); this.remove();" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (tabs) -->
+    <section id="experience" class="section">
+      <h2 class="section-title"><span>02.</span> Where I’ve Worked</h2>
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-orientation="vertical">
+          <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-mp" data-target="panel-mp">Public Prosecutor’s Office</button>
+          <button class="tab" role="tab" aria-controls="panel-usaid" data-target="panel-usaid">USAID / Chemonics</button>
+          <button class="tab" role="tab" aria-controls="panel-pj" data-target="panel-pj">Judicial Branch</button>
+          <button class="tab" role="tab" aria-controls="panel-pcm" data-target="panel-pcm">PCM (Presidency of the CM)</button>
+          <button class="tab" role="tab" aria-controls="panel-mtpe" data-target="panel-mtpe">Ministry of Labor (MTPE)</button>
         </div>
 
-        <footer class="smallprint">© <span id="year"></span> — Built for GitHub Pages</footer>
-      </header>
-    </aside>
-
-    <!-- Main content -->
-    <main id="top" class="content">
-      <section id="about" class="section">
-        <h2 class="section-title"><span>About</span></h2>
-        <div class="prose">
-          <p>
-            I’m a data analyst and evaluation specialist focused on public integrity and justice. I build
-            data products, MERL systems, and causal evaluation designs using <span class="mono">Python/R/SQL</span>,
-            reproducible workflows, and <span class="mono">XAI</span> for decision-making.
-          </p>
-          <p>
-            Currently collaborating with the Peruvian Public Prosecutor’s Office on performance measurement,
-            and previously with USAID/Chemonics, PCM and the Judicial Branch.
-          </p>
-        </div>
-      </section>
-
-      <section id="experience" class="section">
-        <h2 class="section-title"><span>Experience</span></h2>
-        <ol class="jobs">
-          <li>
-            <div class="job-head">
-              <h3>Senior Consultant <span class="at">@ Public Prosecutor's Office</span></h3>
-              <span class="date">2024—Now</span>
-            </div>
-            <ul class="job-points">
-              <li>Evaluation methodologies & AI to improve measurement for 5,000+ staff.</li>
+        <div class="panels">
+          <article id="panel-mp" class="panel active" role="tabpanel" tabindex="0">
+            <header class="jobhead">
+              <h3>Senior Consultant <span class="at">@ Public Prosecutor’s Office</span></h3>
+              <span class="date">2024 — Present</span>
+            </header>
+            <ul>
+              <li>Evaluation methodologies & AI for measuring performance of 5,000+ staff.</li>
               <li>Performance systems for administrative areas; CICME data coordination.</li>
             </ul>
-          </li>
-          <li>
-            <div class="job-head">
+          </article>
+
+          <article id="panel-usaid" class="panel" role="tabpanel" tabindex="0">
+            <header class="jobhead">
               <h3>Integrity Specialist <span class="at">@ USAID / Chemonics</span></h3>
               <span class="date">2024</span>
-            </div>
-            <ul class="job-points">
+            </header>
+            <ul>
               <li>Public Integrity Model & Preventive Capacity Index implementation.</li>
-              <li>Quant + qual instruments for Transparent Public Investment.</li>
+              <li>Quant + qual instruments for Transparent Public Investment (TPI).</li>
             </ul>
-          </li>
-          <li>
-            <div class="job-head">
+          </article>
+
+          <article id="panel-pj" class="panel" role="tabpanel" tabindex="0">
+            <header class="jobhead">
               <h3>Technical Specialist <span class="at">@ Judicial Branch</span></h3>
-              <span class="date">2021—2023</span>
-            </div>
-            <ul class="job-points">
-              <li>Productivity reports and methodologies; tech innovation lab.</li>
+              <span class="date">2021 — 2023</span>
+            </header>
+            <ul>
+              <li>Productivity/efficiency reports; quantitative methodologies; innovation lab.</li>
+              <li>Upgrades to the Project Registration & Tracking System.</li>
             </ul>
-          </li>
-        </ol>
-      </section>
+          </article>
 
-      <section id="projects" class="section">
-        <h2 class="section-title"><span>Projects</span></h2>
+          <article id="panel-pcm" class="panel" role="tabpanel" tabindex="0">
+            <header class="jobhead">
+              <h3>Quantitative Consultant <span class="at">@ PCM</span></h3>
+              <span class="date">2017 — 2021</span>
+            </header>
+            <ul>
+              <li>Dashboards for 300+ users; National Integrity Policy monitoring.</li>
+              <li>Preventive Capacity Index methodology & national tool (100% deployed).</li>
+            </ul>
+          </article>
 
-        <article class="project">
-          <header>
-            <h3>LDA on Congressional Votes</h3>
-            <div class="links">
-              <a href="https://medium.com/" target="_blank" rel="noopener">Article</a>
-              <a href="https://github.com/" target="_blank" rel="noopener">Code</a>
-            </div>
-          </header>
-          <p>
-            Classifier using Linear Discriminant Analysis to map roll-call votes; includes SHAP-like interpretability
-            for communicable insights.
-          </p>
-          <ul class="tags">
-            <li>Python</li><li>Pandas</li><li>Scikit-learn</li>
-          </ul>
-        </article>
+          <article id="panel-mtpe" class="panel" role="tabpanel" tabindex="0">
+            <header class="jobhead">
+              <h3>Quantitative Consultant <span class="at">@ MTPE</span></h3>
+              <span class="date">2018</span>
+            </header>
+            <ul>
+              <li>Optimized audit routing via geospatial analysis (+15% audits; fuel savings).</li>
+              <li>Identified procurement overruns (&gt;US$100k savings).</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <article class="project">
-          <header>
-            <h3>OpenAI Business Model — Analysis</h3>
-            <div class="links">
-              <a href="#" target="_blank" rel="noopener">Article</a>
-            </div>
-          </header>
-          <p>Strategic teardown (linear vs platform) and implications for public value creation.</p>
-          <ul class="tags">
-            <li>Strategy</li><li>Policy</li>
-          </ul>
-        </article>
+    <!-- Work / Projects -->
+    <section id="work" class="section">
+      <h2 class="section-title"><span>03.</span> Some Things I’ve Built</h2>
 
-      </section>
+      <!-- Featured project 1 (imagen izquierda, texto derecha) -->
+      <article class="project">
+        <div class="project-media img1" aria-hidden="true"></div>
+        <div class="project-copy">
+          <p class="eyebrow">Featured Project</p>
+          <h3>LDA on Congressional Votes</h3>
+          <p>Classifier using LDA to map roll-call votes; interpretability for communicable insights to non-technical audiences.</p>
+          <ul class="tags"><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul>
+          <div class="links">
+            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="https://medium.com/" target="_blank" rel="noopener" aria-label="External">External</a>
+          </div>
+        </div>
+      </article>
 
-      <section id="contact" class="section">
-        <h2 class="section-title"><span>Contact</span></h2>
-        <p class="prose">
-          Interested in impact evaluations, XAI for policy, or data products for integrity & justice?
-          Let’s talk.
-        </p>
-        <p>
-          <a class="btn" href="mailto:miguel.jesus.cor@gmail.com">Email me</a>
-        </p>
-      </section>
-    </main>
-  </div>
+      <!-- Featured project 2 (texto izquierda, imagen derecha) -->
+      <article class="project alt">
+        <div class="project-copy">
+          <p class="eyebrow">Featured Project</p>
+          <h3>Innovation Lab — Judicial Branch</h3>
+          <p>Lightweight lab model to deliver software/app initiatives (80% delivery), productivity metrics and pipeline for improvements.</p>
+          <ul class="tags"><li>Ops</li><li>Analytics</li><li>Change Mgmt</li></ul>
+          <div class="links">
+            <a href="#" aria-label="External">Case</a>
+          </div>
+        </div>
+        <div class="project-media img2" aria-hidden="true"></div>
+      </article>
+
+      <!-- Featured project 3 -->
+      <article class="project">
+        <div class="project-media img3" aria-hidden="true"></div>
+        <div class="project-copy">
+          <p class="eyebrow">Featured Project</p>
+          <h3>Transparent Public Investment (TPI)</h3>
+          <p>Design of mixed-methods instruments and integrity indicators for regional partners; reporting and dissemination.</p>
+          <ul class="tags"><li>MEL</li><li>Survey design</li><li>Policy</li></ul>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <h2 class="section-title"><span>04.</span> What’s Next?</h2>
+      <h3 class="contact-title">Get In Touch</h3>
+      <p>Interested in impact evaluation, XAI for policy or data products for integrity & justice? Let’s talk.</p>
+      <a class="btn" href="mailto:miguel.jesus.cor@gmail.com">Say Hello</a>
+    </section>
+
+    <footer class="footer">Designed & Built by Miguel A. Jesús • Layout inspired by Brittany Chiang v4 (MIT)</footer>
+  </main>
 
   <script src="main.js"></script>
 </body>
