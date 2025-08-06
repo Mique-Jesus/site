@@ -239,3 +239,33 @@ document.getElementById('langToggle').addEventListener('click', () => {
 
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* --- Scrollytelling con IntersectionObserver (patrón tipo Scrollama) --- */
+// refs: The Pudding (sticky) + Scrollama (idea general)
+const steps = document.querySelectorAll('.story .step');
+const frames = document.querySelectorAll('.story-graphic .frame');
+
+if (steps.length && frames.length) {
+  const byId = id => document.getElementById(id);
+
+  const showFrame = id => {
+    frames.forEach(f => f.classList.toggle('show', f.id === id));
+  };
+
+  const setActive = el => {
+    steps.forEach(s => s.classList.toggle('is-active', s === el));
+    showFrame(el.dataset.frame);
+  };
+
+  // inicial
+  const first = document.querySelector('.story .step');
+  if (first) setActive(first);
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) setActive(entry.target);
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0.0 });
+
+  steps.forEach(s => io.observe(s));
+}
