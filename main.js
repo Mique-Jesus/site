@@ -1,25 +1,31 @@
-// Minimal JS: set year, smooth scroll & active section highlighting
-document.getElementById('year').textContent = new Date().getFullYear();
+// Year
+document.addEventListener('DOMContentLoaded', () => {
+  const footer = document.querySelector('.footer');
+  if (footer && !footer.textContent.includes(new Date().getFullYear())) {
+    footer.innerHTML = footer.innerHTML.replace('Miguel A. Jesús', `Miguel A. Jesús • ${new Date().getFullYear()}`);
+  }
+});
 
-const links = document.querySelectorAll('.nav a');
-links.forEach(a => {
-  a.addEventListener('click', e => {
+// Smooth scroll + active states
+document.querySelectorAll('.topnav a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    if(a.classList.contains('btn')) return;
     e.preventDefault();
     const id = a.getAttribute('href');
-    document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
-    history.pushState(null, '', id);
+    document.querySelector(id)?.scrollIntoView({behavior:'smooth', block:'start'});
+    history.pushState(null,'',id);
   });
 });
 
-// Intersection Observer to underline active section link
-const sections = [...document.querySelectorAll('main .section')];
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    const id = '#' + entry.target.id;
-    const link = document.querySelector(`.nav a[href="${id}"]`);
-    if(link){
-      if(entry.isIntersecting){ links.forEach(l=>l.classList.remove('active')); link.classList.add('active'); }
-    }
+// Tabs (Experience)
+const tabs = document.querySelectorAll('.tab');
+const panels = document.querySelectorAll('.panel');
+tabs.forEach(t=>{
+  t.addEventListener('click', ()=>{
+    tabs.forEach(x=>x.classList.remove('active'));
+    panels.forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    const panel = document.getElementById(t.dataset.target);
+    if(panel) panel.classList.add('active');
   });
-}, {rootMargin:'-40% 0px -55% 0px', threshold:0});
-sections.forEach(s=>obs.observe(s));
+});
