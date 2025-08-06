@@ -95,3 +95,47 @@ h1{font-size:clamp(2rem,4vw,3rem);line-height:1.1;margin:0 0 .6rem}
   --muted:#475569;
   --ring:rgba(2,6,23,.12);
 }
+
+/* --- Estilo conciso --- */
+.exp-list article {background:#0c1628;border:1px solid #1f2a3a;border-radius:.8rem;padding:1rem;margin-bottom:.8rem}
+.exp-list header{font-size:1rem;margin-bottom:.25rem}
+.exp-list p{color:var(--muted);margin:0}
+
+.section h2{display:flex;align-items:center;gap:.6rem}
+.section h2::after{content:"";flex:1;height:1px;background:#1f2a3a;opacity:.6}
+
+/* Scrollytelling layout */
+.story .muted.sm{font-size:.9rem}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start}
+@media (max-width:900px){.story-grid{grid-template-columns:1fr}}
+
+.story-steps{display:flex;flex-direction:column;gap:1.2rem}
+.step{background:#0c1628;border:1px solid #1f2a3a;border-radius:.9rem;padding:1rem;opacity:.6;transition:.2s}
+.step.is-active{opacity:1;outline:2px solid rgba(96,165,250,.25)}
+.step h3{margin:.2rem 0 .4rem}
+.step .bul{margin:.6rem 0 0 1rem;color:var(--muted)}
+.step .bul li{margin:.15rem 0}
+
+.story-graphic{position:sticky;top:80px;height:calc(100vh - 120px);display:grid;align-items:center}
+.frame{display:none}
+.frame.show{display:block}
+.viz{background:linear-gradient(180deg,#0f172a,#0d1526);border:1px solid #1f2a3a;border-radius:1rem;padding:1rem}
+.viz-sub{color:var(--muted);margin:.1rem 0 .8rem}
+.viz-box{height:54vh;border-radius:.8rem;border:1px dashed #1f2a3a;background:#0b1220;position:relative;overflow:hidden}
+.viz-box.stripes::before,
+.viz-box.grid::before,
+.viz-box.dots::before{
+  content:"";position:absolute;inset:0;opacity:.45
+}
+.viz-box.stripes::before{background:repeating-linear-gradient(135deg,#10243a 0 12px,#0b1a2b 12px 24px)}
+.viz-box.grid::before{background:
+  linear-gradient(#142036 1px,transparent 1px),
+  linear-gradient(90deg,#142036 1px,transparent 1px);
+  background-size:32px 32px,32px 32px}
+.viz-box.dots::before{background:radial-gradient(#1f3558 1.5px,transparent 1.5px) 0 0/18px 18px}
+
+/* Light theme tweaks */
+:root.light .exp-list article,
+:root.light .step,
+:root.light .viz{background:#fff;border-color:#e5e7eb}
+:root.light .viz-box{background:#f8fafc;border-color:#e5e7eb}
