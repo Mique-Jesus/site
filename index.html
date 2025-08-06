@@ -1,173 +1,160 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!--
+    Inspired by Brittany Chiang v4 (MIT): https://github.com/bchiang7/v4
+    This static adaptation keeps the visual language (colors, spacing, layout)
+    without Gatsby or styled-components.
+  -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title data-i18n="meta.title">Miguel A. Jesús — Data, AI & Public Sector</title>
-  <meta name="description" content="Portfolio of Miguel A. Jesús — Data analyst and evaluation specialist applying AI and quantitative methods to integrity, justice, and development.">
-  <meta property="og:title" content="Miguel A. Jesús — Data, AI & Public Sector">
-  <meta property="og:description" content="Impact evaluations, MERL, applied AI, and data products for public value.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0f172a">
-
-  <!-- Fonts -->
+  <title>Miguel A. Jesús Correa — Data & AI</title>
+  <meta name="description" content="Data & AI for public value — portfolio of Miguel A. Jesús.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <!-- Headings/body similar to Brittany v4: geometric sans + mono -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="layout">
+    <!-- Sidebar (sticky) -->
+    <aside class="sidebar">
+      <header>
+        <a class="logo" href="#top">Miguel A. Jesús</a>
+        <h1 class="tagline">Data & AI for Public Value</h1>
+        <p class="blurb">
+          Analyst & evaluation specialist applying <span class="mono">ML/XAI</span> to integrity,
+          justice & development. Building reliable data systems and actionable insights.
+        </p>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-  <header class="container">
-    <nav class="nav">
-      <a class="brand" href="#"><span class="dot"></span> <span data-i18n="brand">Miguel A. Jesús</span></a>
-      <div class="nav-actions">
-        <button id="langToggle" class="icon" aria-label="Cambiar idioma / Change language">EN</button>
-        <button id="themeToggle" class="icon" aria-label="Toggle theme">🌙</button>
-        <a class="btn" href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener" data-i18n="actions.cv">Download CV</a>
-      </div>
-    </nav>
-  </header>
+        <div class="actions">
+          <a class="btn" href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Download CV</a>
+          <div class="social">
+            <a class="icon" href="https://www.linkedin.com/in/migueljesuscor" target="_blank" aria-label="LinkedIn" rel="noopener">
+              <!-- LinkedIn SVG -->
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM14.5 9c-2.1 0-3.5 1.3-3.5 3.3V21h4v-6.2c0-1.2.8-2 2-2s1.9.8 1.9 2V21h4v-6.6C22.9 10.7 21 9 18.7 9c-1.3 0-2.4.5-3.2 1.5V9h-1z"/></svg>
+            </a>
+            <a class="icon" href="https://github.com/Mique-Jesus" target="_blank" aria-label="GitHub" rel="noopener">
+              <!-- GitHub SVG -->
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 .5A12 12 0 0 0 0 12.6c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.5-1.5-1.9-1.5-1.9-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.8-2.7-.3-5.5-1.4-5.5-6.1 0-1.4.5-2.6 1.3-3.5-.2-.3-.6-1.6.1-3.2 0 0 1.1-.4 3.6 1.3a12.3 12.3 0 0 1 6.6 0c2.5-1.7 3.6-1.3 3.6-1.3.7 1.6.3 2.9.1 3.2.9.9 1.3 2.1 1.3 3.5 0 4.7-2.8 5.8-5.5 6.1.4.3.8 1 .8 2.1v3.1c0 .3.2.7.8.6A12 12 0 0 0 24 12.6 12 12 0 0 0 12 .5z"/></svg>
+            </a>
+            <a class="icon" href="mailto:miguel.jesus.cor@gmail.com" aria-label="Email">
+              <!-- Mail SVG -->
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+            </a>
+          </div>
+        </div>
 
-<main class="container">
-  <!-- HERO + ABOUT (conciso, con CTAs) -->
-  <section class="hero" id="home" aria-labelledby="intro-title">
-    <div class="hero-text">
-      <h1 id="intro-title">Datos & IA para valor público</h1>
-      <p class="lead">
-        Diseño y ejecuto soluciones de datos, evaluación y analítica aplicada para integridad, justicia y desarrollo.
-        <span class="typed" aria-live="polite"></span>
-      </p>
-      <div class="quick">
-        <a class="btn primary" href="#work">Proyectos</a>
-        <a class="btn" href="#experience">Experiencia</a>
-        <a class="btn outline" href="#contact">Contacto</a>
-      </div>
-      <ul class="meta">
-        <li>📍 Lima, Perú</li>
-        <li>✉️ <a href="mailto:miguel.jesus.cor@gmail.com">miguel.jesus.cor@gmail.com</a></li>
-        <li>📄 <a href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Descargar CV</a></li>
-      </ul>
-    </div>
+        <footer class="smallprint">© <span id="year"></span> — Built for GitHub Pages</footer>
+      </header>
+    </aside>
 
-    <div class="hero-card">
-      <div class="card">
-        <h3>En qué ayudo</h3>
-        <ul>
-          <li>Evaluación de impacto y MEL</li>
-          <li>IA aplicada y analítica</li>
-          <li>Integridad pública y justicia</li>
-          <li>Visualización y productos de datos</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Stack</h3>
-        <ul class="tags">
-          <li>Python</li><li>R</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>BigQuery</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- Main content -->
+    <main id="top" class="content">
+      <section id="about" class="section">
+        <h2 class="section-title"><span>About</span></h2>
+        <div class="prose">
+          <p>
+            I’m a data analyst and evaluation specialist focused on public integrity and justice. I build
+            data products, MERL systems, and causal evaluation designs using <span class="mono">Python/R/SQL</span>,
+            reproducible workflows, and <span class="mono">XAI</span> for decision-making.
+          </p>
+          <p>
+            Currently collaborating with the Peruvian Public Prosecutor’s Office on performance measurement,
+            and previously with USAID/Chemonics, PCM and the Judicial Branch.
+          </p>
+        </div>
+      </section>
 
-  <!-- WORK (scrollytelling “sticky”) -->
-  <section id="work" class="section story">
-    <h2>Casos seleccionados</h2>
-    <div class="story-grid">
-      <!-- Columna izquierda: pasos (texto) -->
-      <div class="story-steps" id="storySteps">
-        <article class="step is-active" data-frame="f1">
-          <h3>Medición de productividad fiscal</h3>
-          <p>Construí un sistema de evaluación con métricas comparables y auditoría de calidad de datos para personal fiscal a nivel nacional.</p>
-          <ul class="bul">
-            <li>Definición estandarizada de indicadores</li>
-            <li>Paneles para 5k+ usuarios internos</li>
-            <li>Proceso reproducible (ETL + QA/QC)</li>
+      <section id="experience" class="section">
+        <h2 class="section-title"><span>Experience</span></h2>
+        <ol class="jobs">
+          <li>
+            <div class="job-head">
+              <h3>Senior Consultant <span class="at">@ Public Prosecutor's Office</span></h3>
+              <span class="date">2024—Now</span>
+            </div>
+            <ul class="job-points">
+              <li>Evaluation methodologies & AI to improve measurement for 5,000+ staff.</li>
+              <li>Performance systems for administrative areas; CICME data coordination.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="job-head">
+              <h3>Integrity Specialist <span class="at">@ USAID / Chemonics</span></h3>
+              <span class="date">2024</span>
+            </div>
+            <ul class="job-points">
+              <li>Public Integrity Model & Preventive Capacity Index implementation.</li>
+              <li>Quant + qual instruments for Transparent Public Investment.</li>
+            </ul>
+          </li>
+          <li>
+            <div class="job-head">
+              <h3>Technical Specialist <span class="at">@ Judicial Branch</span></h3>
+              <span class="date">2021—2023</span>
+            </div>
+            <ul class="job-points">
+              <li>Productivity reports and methodologies; tech innovation lab.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section id="projects" class="section">
+        <h2 class="section-title"><span>Projects</span></h2>
+
+        <article class="project">
+          <header>
+            <h3>LDA on Congressional Votes</h3>
+            <div class="links">
+              <a href="https://medium.com/" target="_blank" rel="noopener">Article</a>
+              <a href="https://github.com/" target="_blank" rel="noopener">Code</a>
+            </div>
+          </header>
+          <p>
+            Classifier using Linear Discriminant Analysis to map roll-call votes; includes SHAP-like interpretability
+            for communicable insights.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Pandas</li><li>Scikit-learn</li>
           </ul>
         </article>
 
-        <article class="step" data-frame="f2">
-          <h3>Transparencia en inversión pública (TPI)</h3>
-          <p>Instrumentos cuantitativos y cualitativos para medir riesgos y desempeño en proyectos regionales, con tableros accionables.</p>
-          <ul class="bul">
-            <li>Encuestas y validaciones cruzadas</li>
-            <li>Modelos de riesgo y trazabilidad</li>
-            <li>Kit metodológico y guía operativa</li>
+        <article class="project">
+          <header>
+            <h3>OpenAI Business Model — Analysis</h3>
+            <div class="links">
+              <a href="#" target="_blank" rel="noopener">Article</a>
+            </div>
+          </header>
+          <p>Strategic teardown (linear vs platform) and implications for public value creation.</p>
+          <ul class="tags">
+            <li>Strategy</li><li>Policy</li>
           </ul>
         </article>
 
-        <article class="step" data-frame="f3">
-          <h3>Índice de Capacidad Preventiva</h3>
-          <p>Metodología para seguimiento de la Política Nacional de Integridad y un portal nacional de reporte.</p>
-          <ul class="bul">
-            <li>Tableros para 300+ entidades</li>
-            <li>Pipeline de datos con auditoría</li>
-            <li>Despliegue y soporte a usuarios</li>
-          </ul>
-        </article>
-      </div>
+      </section>
 
-      <!-- Columna derecha: gráfico/imagen sticky que cambia -->
-      <div class="story-graphic" id="storyGraphic" aria-hidden="true">
-        <div class="frame show" id="f1">
-          <div class="viz">
-            <h4>Productividad fiscal</h4>
-            <p class="viz-sub">KPIs normalizados + intervalos de confianza</p>
-            <div class="viz-box stripes"></div>
-          </div>
-        </div>
-        <div class="frame" id="f2">
-          <div class="viz">
-            <h4>Mapa de riesgos TPI</h4>
-            <p class="viz-sub">Riesgo × Desempeño por región</p>
-            <div class="viz-box grid"></div>
-          </div>
-        </div>
-        <div class="frame" id="f3">
-          <div class="viz">
-            <h4>Capacidad preventiva</h4>
-            <p class="viz-sub">Brechas vs. metas anuales</p>
-            <div class="viz-box dots"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="muted sm">Patrón sticky con IntersectionObserver inspirado en Scrollama / The Pudding (sin dependencias). </p>
-  </section>
-
-  <!-- EXPERIENCE (resumida, tipo “v4”) -->
-  <section id="experience" class="section">
-    <h2>Experiencia</h2>
-    <div class="exp-list">
-      <article>
-        <header><strong>Senior Consultant</strong> · Ministerio Público (Perú) · 2024–Actualidad</header>
-        <p>Metodologías de evaluación con IA; sistema de desempeño para personal administrativo; coordinación CICME.</p>
-      </article>
-      <article>
-        <header><strong>Integrity Specialist</strong> · USAID/Chemonics · 2024</header>
-        <p>Modelo de Integridad Pública, Índice de Capacidad Preventiva, instrumentos TPI, guías técnicas.</p>
-      </article>
-      <article>
-        <header><strong>Technical Specialist</strong> · Poder Judicial (Perú) · 2021–2023</header>
-        <p>Reportes de productividad/eficiencia, laboratorio de innovación, mejoras a SRSP.</p>
-      </article>
-      <article>
-        <header><strong>Consultor Cuantitativo</strong> · PCM (Perú) · 2017–2021</header>
-        <p>Seguimiento a integridad, tableros Tableau, metodología de índice, auditoría base SQL nacional.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contacto</h2>
-    <div class="contact">
-      <a class="btn primary" href="mailto:miguel.jesus.cor@gmail.com">Escríbeme</a>
-      <a class="btn outline" href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">Todos los enlaces</a>
-    </div>
-  </section>
-</main>
+      <section id="contact" class="section">
+        <h2 class="section-title"><span>Contact</span></h2>
+        <p class="prose">
+          Interested in impact evaluations, XAI for policy, or data products for integrity & justice?
+          Let’s talk.
+        </p>
+        <p>
+          <a class="btn" href="mailto:miguel.jesus.cor@gmail.com">Email me</a>
+        </p>
+      </section>
+    </main>
+  </div>
 
   <script src="main.js"></script>
 </body>
