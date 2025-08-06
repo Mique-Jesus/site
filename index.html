@@ -31,220 +31,143 @@
     </nav>
   </header>
 
-  <main class="container">
-    <!-- Hero -->
-    <section class="hero" id="home" aria-labelledby="intro-title">
-      <div class="hero-text">
-        <h1 id="intro-title" data-i18n="hero.title">Data & AI for Public Value</h1>
-        <p class="lead">
-          <span data-i18n="hero.lead">I build data products and evaluation systems for integrity, justice, and development.</span>
-          <span class="typed" aria-live="polite"></span>
-        </p>
-        <div class="quick">
-          <a class="btn primary" href="#experience" data-i18n="hero.cta1">Experience</a>
-          <a class="btn" href="#projects" data-i18n="hero.cta2">Writing</a>
-          <a class="btn outline" href="#contact" data-i18n="hero.cta3">Contact</a>
-        </div>
-        <ul class="meta">
-          <li>📍 <span data-i18n="meta.location">Lima, Peru</span></li>
-          <li>✉️ <a href="mailto:miguel.jesus.cor@gmail.com">miguel.jesus.cor@gmail.com</a></li>
-          <li>🔗 <a href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">linktr.ee/mique.jesus</a></li>
+<main class="container">
+  <!-- HERO + ABOUT (estilo Brittany: conciso, con CTAs) -->
+  <section class="hero" id="home" aria-labelledby="intro-title">
+    <div class="hero-text">
+      <h1 id="intro-title">Datos & IA para valor público</h1>
+      <p class="lead">
+        Diseño y ejecuto soluciones de datos, evaluación y analítica aplicada para integridad, justicia y desarrollo.
+        <span class="typed" aria-live="polite"></span>
+      </p>
+      <div class="quick">
+        <a class="btn primary" href="#work">Proyectos</a>
+        <a class="btn" href="#experience">Experiencia</a>
+        <a class="btn outline" href="#contact">Contacto</a>
+      </div>
+      <ul class="meta">
+        <li>📍 Lima, Perú</li>
+        <li>✉️ <a href="mailto:miguel.jesus.cor@gmail.com">miguel.jesus.cor@gmail.com</a></li>
+        <li>📄 <a href="Miguel_Jesus_CV_2025.pdf" target="_blank" rel="noopener">Descargar CV</a></li>
+      </ul>
+    </div>
+
+    <div class="hero-card">
+      <div class="card">
+        <h3>En qué ayudo</h3>
+        <ul>
+          <li>Evaluación de impacto y MEL</li>
+          <li>IA aplicada y analítica</li>
+          <li>Integridad pública y justicia</li>
+          <li>Visualización y productos de datos</li>
         </ul>
       </div>
-      <div class="hero-card" role="img" aria-label="Data network visualization">
-        <div class="card">
-          <h3 data-i18n="focus.title">Focus Areas</h3>
-          <ul>
-            <li data-i18n="focus.a">Impact Evaluation & MERL</li>
-            <li data-i18n="focus.b">Applied AI & Analytics</li>
-            <li data-i18n="focus.c">Public Integrity & Justice</li>
-            <li data-i18n="focus.d">Data Visualization</li>
+      <div class="card">
+        <h3>Stack</h3>
+        <ul class="tags">
+          <li>Python</li><li>R</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>BigQuery</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK (scrollytelling “sticky”) -->
+  <section id="work" class="section story">
+    <h2>Casos seleccionados</h2>
+    <div class="story-grid">
+      <!-- Columna izquierda: pasos (texto) -->
+      <div class="story-steps" id="storySteps">
+        <article class="step is-active" data-frame="f1">
+          <h3>Medición de productividad fiscal</h3>
+          <p>Construí un sistema de evaluación con métricas comparables y auditoría de calidad de datos para personal fiscal a nivel nacional.</p>
+          <ul class="bul">
+            <li>Definición estandarizada de indicadores</li>
+            <li>Paneles para 5k+ usuarios internos</li>
+            <li>Proceso reproducible (ETL + QA/QC)</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3 data-i18n="toolbox.title">Toolbox</h3>
-          <ul class="tags">
-            <li>Python</li><li>R</li><li>SQL</li><li>Power BI</li><li>Tableau</li><li>SPSS</li><li>VBA</li>
+        </article>
+
+        <article class="step" data-frame="f2">
+          <h3>Transparencia en inversión pública (TPI)</h3>
+          <p>Instrumentos cuantitativos y cualitativos para medir riesgos y desempeño en proyectos regionales, con tableros accionables.</p>
+          <ul class="bul">
+            <li>Encuestas y validaciones cruzadas</li>
+            <li>Modelos de riesgo y trazabilidad</li>
+            <li>Kit metodológico y guía operativa</li>
           </ul>
+        </article>
+
+        <article class="step" data-frame="f3">
+          <h3>Índice de Capacidad Preventiva</h3>
+          <p>Metodología para seguimiento de la Política Nacional de Integridad y un portal nacional de reporte.</p>
+          <ul class="bul">
+            <li>Tableros para 300+ entidades</li>
+            <li>Pipeline de datos con auditoría</li>
+            <li>Despliegue y soporte a usuarios</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Columna derecha: gráfico/imagen sticky que cambia -->
+      <div class="story-graphic" id="storyGraphic" aria-hidden="true">
+        <div class="frame show" id="f1">
+          <div class="viz">
+            <h4>Productividad fiscal</h4>
+            <p class="viz-sub">KPIs normalizados + intervalos de confianza</p>
+            <div class="viz-box stripes"></div>
+          </div>
+        </div>
+        <div class="frame" id="f2">
+          <div class="viz">
+            <h4>Mapa de riesgos TPI</h4>
+            <p class="viz-sub">Riesgo × Desempeño por región</p>
+            <div class="viz-box grid"></div>
+          </div>
+        </div>
+        <div class="frame" id="f3">
+          <div class="viz">
+            <h4>Capacidad preventiva</h4>
+            <p class="viz-sub">Brechas vs. metas anuales</p>
+            <div class="viz-box dots"></div>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+    <p class="muted sm">Patrón sticky con IntersectionObserver inspirado en Scrollama / The Pudding (sin dependencias). </p>
+  </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section">
-      <h2 data-i18n="exp.title">Experience</h2>
-      <div class="timeline">
-        <article class="item">
-          <div class="time">2024–<span data-i18n="now">Now</span></div>
-          <div class="content">
-            <h3 data-i18n="exp.1.role">Senior Consultant — Public Prosecutor's Office (Peru)</h3>
-            <ul>
-              <li data-i18n="exp.1.a">Designed and implemented evaluation methodologies, including AI to improve performance measurement for 5,000+ prosecutorial staff nationwide.</li>
-              <li data-i18n="exp.1.b">Built performance evaluation systems for the General Secretariat administrative staff.</li>
-              <li data-i18n="exp.1.c">Led CICME interdepartmental coordination on data management and dissemination for justice services.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2024</div>
-          <div class="content">
-            <h3 data-i18n="exp.2.role">Integrity Specialist — USAID / Chemonics</h3>
-            <ul>
-              <li data-i18n="exp.2.a">Supported implementation of the Public Integrity Model and evaluated via the Preventive Capacity Index.</li>
-              <li data-i18n="exp.2.b">Designed quant & qual instruments for the Transparent Public Investment (TPI) project.</li>
-              <li data-i18n="exp.2.c">Co-authored technical guides, reports, and methodologies for regional partners.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2021–2023</div>
-          <div class="content">
-            <h3 data-i18n="exp.3.role">Technical Specialist — Judicial Branch (Peru)</h3>
-            <ul>
-              <li data-i18n="exp.3.a">Produced statistical productivity/efficiency reports; identified improvements in 60%+ of courts.</li>
-              <li data-i18n="exp.3.b">Developed quantitative methodologies; groundwork for non-jurisdictional performance evaluation.</li>
-              <li data-i18n="exp.3.c">Led a Tech Innovation Lab; 80% delivery of software/app initiatives.</li>
-              <li data-i18n="exp.3.d">Pushed upgrades to the Project Registration & Tracking System; 75% of proposals adopted.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2017–2021</div>
-          <div class="content">
-            <h3 data-i18n="exp.4.role">Quantitative Consultant — Presidency of the Council of Ministers (Peru)</h3>
-            <ul>
-              <li data-i18n="exp.4.a">Analyzed monthly data from 100+ entities for National Integrity Policy compliance.</li>
-              <li data-i18n="exp.4.b">Built Tableau dashboards reaching 300+ users.</li>
-              <li data-i18n="exp.4.c">Co-developed Preventive Capacity Index methodology and a national web tool (100% deployed).</li>
-              <li data-i18n="exp.4.d">Audited the national SQL database on Sworn Statements; proposed data-quality actions.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2019</div>
-          <div class="content">
-            <h3 data-i18n="exp.5.role">Technical Analyst — Presidency of the Council of Ministers (Peru)</h3>
-            <ul>
-              <li data-i18n="exp.5.a">Produced statistical reports on investment budget transfers for ministers and governors.</li>
-              <li data-i18n="exp.5.b">Automated consistency checks with VBA for reporting pipelines.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2018</div>
-          <div class="content">
-            <h3 data-i18n="exp.6.role">Quantitative Consultant — Ministry of Labor and Employment Promotion</h3>
-            <ul>
-              <li data-i18n="exp.6.a">Optimized audit mobility scheduling with geospatial analysis (+15% audits; significant fuel savings).</li>
-              <li data-i18n="exp.6.b">Identified procurement cost overruns (>US$100k savings).</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2016–2017</div>
-          <div class="content">
-            <h3 data-i18n="exp.7.role">Research Assistant — IMA GO!</h3>
-            <ul>
-              <li data-i18n="exp.7.a">Led a 20+ team for market study surveys and sped up data entry by 20%.</li>
-            </ul>
-          </div>
-        </article>
-        <article class="item">
-          <div class="time">2014–2016</div>
-          <div class="content">
-            <h3 data-i18n="exp.8.role">Programs & Projects Assistant — NDI (Washington, D.C.)</h3>
-            <ul>
-              <li data-i18n="exp.8.a">Supported training programs for political organizations and vulnerable populations across the Andes.</li>
-              <li data-i18n="exp.8.b">Built statistical evaluations that lifted participant satisfaction by 25%.</li>
-              <li data-i18n="exp.8.c">Facilitated cooperation projects with government agencies and civil society.</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+  <!-- EXPERIENCE (resumida, tipo “v4”) -->
+  <section id="experience" class="section">
+    <h2>Experiencia</h2>
+    <div class="exp-list">
+      <article>
+        <header><strong>Senior Consultant</strong> · Ministerio Público (Perú) · 2024–Actualidad</header>
+        <p>Metodologías de evaluación con IA; sistema de desempeño para personal administrativo; coordinación CICME.</p>
+      </article>
+      <article>
+        <header><strong>Integrity Specialist</strong> · USAID/Chemonics · 2024</header>
+        <p>Modelo de Integridad Pública, Índice de Capacidad Preventiva, instrumentos TPI, guías técnicas.</p>
+      </article>
+      <article>
+        <header><strong>Technical Specialist</strong> · Poder Judicial (Perú) · 2021–2023</header>
+        <p>Reportes de productividad/eficiencia, laboratorio de innovación, mejoras a SRSP.</p>
+      </article>
+      <article>
+        <header><strong>Consultor Cuantitativo</strong> · PCM (Perú) · 2017–2021</header>
+        <p>Seguimiento a integridad, tableros Tableau, metodología de índice, auditoría base SQL nacional.</p>
+      </article>
+    </div>
+  </section>
 
-    <!-- Education & Certifications -->
-    <section class="section" id="education">
-      <h2 data-i18n="edu.title">Education</h2>
-      <div class="cards">
-        <div class="card">
-          <h3 data-i18n="edu.1.title">Master in Data Management & Analysis (in process)</h3>
-          <p data-i18n="edu.1.inst">University of Buenos Aires (UBA), 2023–2025</p>
-          <p data-i18n="edu.1.desc">Econometrics, data mining, AI, and advanced data management in organizations.</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="edu.2.title">Diploma in Applied Statistics</h3>
-          <p data-i18n="edu.2.inst">Pontifical Catholic University of Peru (PUCP), 2017–2018</p>
-        </div>
-        <div class="card">
-          <h3 data-i18n="edu.3.title">Bachelor in Political Science</h3>
-          <p data-i18n="edu.3.inst">National University of San Marcos (UNMSM), 2011–2016</p>
-          <p data-i18n="edu.3.desc">Quantitative profile; thesis graded outstanding.</p>
-        </div>
-      </div>
-
-      <h2 data-i18n="certs.title">Certifications</h2>
-      <ul class="tags">
-        <li data-i18n="certs.1">IBM Data Science Professional (2023)</li>
-        <li data-i18n="certs.2">IELTS Academic (British Council, 2023)</li>
-      </ul>
-    </section>
-
-    <!-- Skills -->
-    <section class="section" id="skills">
-      <h2 data-i18n="skills.title">Skills</h2>
-      <div class="grid skills">
-        <div class="skill"><span>Python</span></div>
-        <div class="skill"><span>R</span></div>
-        <div class="skill"><span>SQL</span></div>
-        <div class="skill"><span>BigQuery</span></div>
-        <div class="skill"><span>Tableau</span></div>
-        <div class="skill"><span>Power BI</span></div>
-        <div class="skill"><span>SPSS</span></div>
-        <div class="skill"><span>VBA</span></div>
-        <div class="skill"><span>Excel</span></div>
-        <div class="skill"><span>Atlas.ti</span></div>
-        <div class="skill"><span data-i18n="skills.prompt">Prompt Engineering</span></div>
-        <div class="skill"><span>LLMs</span></div>
-        <div class="skill"><span>KoboToolbox</span></div>
-      </div>
-      <p class="muted" data-i18n="skills.langs">Languages: Spanish (native), English (advanced), Portuguese (basic).</p>
-    </section>
-
-    <!-- Publications & Writing -->
-    <section class="section" id="projects">
-      <h2 data-i18n="writing.title">Selected Writings</h2>
-      <ul class="list">
-        <li data-i18n="writing.1">Beyond Ideology: Classifying Congressional Votes with Linear Discriminant Analysis (LDA)</li>
-        <li data-i18n="writing.2">Linear or Platform: Unraveling the OpenAI Business Model</li>
-        <li data-i18n="writing.3">Working with SQLite Databases in Python</li>
-      </ul>
-      <p class="muted"><span data-i18n="writing.more">More on</span> <a href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">linktr.ee/mique.jesus</a>.</p>
-    </section>
-
-    <!-- Teaching -->
-    <section class="section" id="teaching">
-      <h2 data-i18n="teach.title">Teaching</h2>
-      <ul class="list">
-        <li data-i18n="teach.1">Lecturer — UNMSM (Mar–Apr 2025): Indicators in Public Policy; AI in Public Policy.</li>
-        <li data-i18n="teach.2">Instructor — Periférica Academy (2018): Statistics & Research Methods (PUCP freshmen).</li>
-        <li data-i18n="teach.3">Teaching Assistant — UNMSM (2017): Project Programming, practice sessions.</li>
-      </ul>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <h2 data-i18n="contact.title">Contact</h2>
-      <div class="contact">
-        <a class="btn primary" href="mailto:miguel.jesus.cor@gmail.com" data-i18n="contact.cta">Email me</a>
-        <a class="btn outline" href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener" data-i18n="contact.links">All links</a>
-      </div>
-    </section>
-
-    <footer class="container footer">
-      <p>© <span id="year"></span> <span data-i18n="brand">Miguel A. Jesús</span> — <span data-i18n="footer">Built with HTML, CSS & JavaScript. Hosted on GitHub Pages.</span></p>
-    </footer>
-  </main>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contacto</h2>
+    <div class="contact">
+      <a class="btn primary" href="mailto:miguel.jesus.cor@gmail.com">Escríbeme</a>
+      <a class="btn outline" href="https://linktr.ee/mique.jesus" target="_blank" rel="noopener">Todos los enlaces</a>
+    </div>
+  </section>
+</main>
 
   <script src="main.js"></script>
 </body>
