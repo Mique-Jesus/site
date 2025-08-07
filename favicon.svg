@@ -2,7 +2,7 @@
 <svg width="100" height="100" viewBox="0 0 100 100" fill="none"
      xmlns="http://www.w3.org/2000/svg">
   <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z"
-        stroke="#64ffda" stroke-width="6" stroke-linejoin="round" fill="none" />
+        stroke="#64ffda" stroke-width="6" stroke-linejoin="round" fill="#0a192f" />
   <text x="50" y="50" text-anchor="middle" dominant-baseline="middle"
         font-family="'Fira Code', monospace"
         font-size="45" font-weight="700" fill="#64ffda">M</text>
