@@ -3,7 +3,7 @@
 Sitio web profesional y portafolio de **Miguel A. Jesús**, analista de datos y especialista en evaluación que aplica IA y métodos cuantitativos a integridad, justicia y desarrollo.  
 El sitio es **bilingüe (ES/EN)**, tiene **modo claro/oscuro**, **fondo interactivo** (canvas), **timeline** de experiencia y **descarga de CV**.
 
-🟢 Demo: https://mique-jesus.github.io/miguel-website/
+🟢 Demo: https://mique-jesus.github.io/professional-website/
 
 ---
 
