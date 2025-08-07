@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  
 <head>
   <!--
     Layout & visual language inspired by Brittany Chiang v4 (MIT):
@@ -16,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+  
 <body>
   <!-- Social (left) -->
   <aside class="side left" aria-label="Social links">
@@ -41,7 +43,17 @@
   <!-- Header -->
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Home">
-      <span class="hex">M</span>
+      <!-- Hex-logo -->
+      <svg class="hex-logo" width="40" height="40" viewBox="0 0 100 100" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+      <!-- Borde hexágono -->
+      <path d="M50 5 L90 27.5 L90 72.5 L50 95 L10 72.5 L10 27.5 Z"
+          stroke="#64ffda" stroke-width="6" stroke-linejoin="round"
+          fill="none" />
+      <!-- Letra M -->
+      <text x="50" y="62" text-anchor="middle" font-family="'Fira Code', monospace"
+          font-size="55" font-weight="700" fill="#64ffda">M</text>
+      </svg>
     </a>
     <nav class="topnav" aria-label="Primary">
       <a href="#about"><span class="num">01.</span> About</a>
