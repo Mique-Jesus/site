@@ -25,6 +25,10 @@ a:hover{color:var(--green)}
 .side::after{content:""; display:block; width:1px; height:80px; background:var(--light-slate); margin:0 auto}
 @media (max-width: 900px){ .side{display:none} }
 
+/* Hex-logo */
+.hex-logo{display:block; transition:transform .3s ease;}
+.hex-logo:hover{transform:rotate(20deg);}
+
 /* ===== Topbar ===== */
 .topbar{position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; align-items:center;
   backdrop-filter: blur(6px); background: rgba(10,25,47,.6); border-bottom:1px solid rgba(100,255,218,.1); padding:.8rem 2rem}
