@@ -21,7 +21,8 @@ a:hover{color:var(--green)}
 .side.left{left:40px}
 .side.right{right:40px; bottom:24px; writing-mode:vertical-rl}
 .side ul{display:flex; flex-direction:column; gap:16px; padding:0; margin:0 0 20px 0; list-style:none}
-.side a{display:inline-flex; align-items:center}
+.side a{display:inline-flex; align-items:center; color: var(--light-slate); transition: color .2s ease}
+.side a:hover{color: var(--green)}
 .side::after{content:""; display:block; width:1px; height:80px; background:var(--light-slate); margin:0 auto}
 .side.right a{
   font-size:0.9rem;         /* ⬅ un poco más pequeño */
