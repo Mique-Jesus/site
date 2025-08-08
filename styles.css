@@ -19,10 +19,18 @@ a:hover{color:var(--green)}
 /* ===== Sidebars (left socials / right email) ===== */
 .side{position:fixed; bottom:0; z-index:10; color:var(--light-slate)}
 .side.left{left:40px}
-.side.right{right:40px; writing-mode:vertical-rl}
+.side.right{right:40px; bottom:24px; writing-mode:vertical-rl}
 .side ul{display:flex; flex-direction:column; gap:16px; padding:0; margin:0 0 20px 0; list-style:none}
 .side a{display:inline-flex; align-items:center}
 .side::after{content:""; display:block; width:1px; height:80px; background:var(--light-slate); margin:0 auto}
+.side.right a{
+  font-size:0.9rem;         /* ⬅ un poco más pequeño */
+  letter-spacing:.08em;     /* look tipo v4 */
+  margin-bottom:20px;       /* ⬅ “respiro” antes de la línea, simétrico al left */
+}
+.side.right::after{
+  height:90px;              /* ⬅ puedes mover a 80–100 para afinar */
+}
 @media (max-width: 900px){ .side{display:none} }
 
 /* Hex-logo */
