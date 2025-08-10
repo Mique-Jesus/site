@@ -58,13 +58,21 @@ a:hover{color:var(--green)}
 .accent { color: var(--green); }
 
 #rotatingWord{
-  display:inline-block;
-  min-width: 4ch;                 /* evita “saltos” cuando muestra AI (2 letras) */
-  transition: opacity .22s ease, transform .22s ease;
+  display: inline-flex;            /* permite centrar el contenido */
+  width: 4.6ch;                    /* reserva espacio (DATA/TECH = 4 letras) */
+  justify-content: center;         /* centra horizontalmente */
+  text-align: center;
+  transition:
+    opacity .28s ease,
+    transform .28s cubic-bezier(.22,.61,.36,1),
+    filter .28s ease;
+  will-change: transform, opacity;
 }
-#rotatingWord.fade{
+
+#rotatingWord.is-out{          /* estado de salida/entrada (crossfade + sutil slide+blur) */
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(.35em) scale(.98);
+  filter: blur(2px);
 }
 
 /* ===== Sections ===== */
