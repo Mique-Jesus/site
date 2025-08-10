@@ -33,7 +33,7 @@ tabs.forEach(t=>{
 // Hero rotating word: DATA → AI → TECH
 const rot = document.getElementById('rotatingWord');
 if (rot) {
-  const words = ['DATA', 'AI', 'TECH'];
+  const words = ['data', 'AI', 'tech'];
   let i = 0;
   rot.textContent = words[i]; // ya es DATA por HTML, pero aseguramos
 
