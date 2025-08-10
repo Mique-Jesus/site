@@ -59,7 +59,7 @@ a:hover{color:var(--green)}
 
 #rotatingWord{
   display: inline-flex;            /* permite centrar el contenido */
-  width: 4ch;                    /* reserva espacio (DATA/TECH = 4 letras) */
+  width: 3.8ch;                    /* reserva espacio (DATA/TECH = 4 letras) */
   justify-content: center;         /* centra horizontalmente */
   text-align: center;
   transition:
