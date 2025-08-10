@@ -29,3 +29,20 @@ tabs.forEach(t=>{
     if(panel) panel.classList.add('active');
   });
 });
+
+// Hero rotating word: DATA → AI → TECH
+const rot = document.getElementById('rotatingWord');
+if (rot) {
+  const words = ['DATA', 'AI', 'TECH'];
+  let i = 0;
+  rot.textContent = words[i]; // ya es DATA por HTML, pero aseguramos
+
+  setInterval(() => {
+    rot.classList.add('fade');      // anima salida
+    setTimeout(() => {
+      i = (i + 1) % words.length;
+      rot.textContent = words[i];   // cambia palabra
+      rot.classList.remove('fade'); // anima entrada
+    }, 220); // coincide con el transition del CSS
+  }, 2000); // cambia cada 2s (ajusta a gusto)
+}
