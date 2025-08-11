@@ -40,7 +40,7 @@ a:hover{color:var(--green)}
 
 /* ===== Topbar ===== */
 .topbar{position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; align-items:center;
-  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); padding: 1.35rem 2rem}
+  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); padding: 1.55rem 2rem}
 .topnav{display:flex; gap:22px; align-items:center}
 .topnav .num{color:var(--green); font-family:var(--mono); font-size:.9rem; margin-right:.25rem}
 .btn{border:1px solid var(--green); color:var(--green); border-radius:8px; padding:.6rem 1rem; font-weight:600}
@@ -54,7 +54,7 @@ a:hover{color:var(--green)}
   min-height: calc(100vh - var(--topbar-h));  /* fallback */
   display: grid;
   align-content: center;        /* centra vertical */
-  transform: translateY(-4vh);  /* súbelo un poco (-3/-5vh para ajustar) */
+  transform: translateY(-6vh);  /* súbelo un poco (-3/-5vh para ajustar) */
   padding: 0;
   row-gap: .7rem;
 }
