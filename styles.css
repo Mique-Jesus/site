@@ -40,70 +40,83 @@ a:hover{color:var(--green)}
 
 /* ===== Topbar ===== */
 .topbar{position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; align-items:center;
-  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); border-bottom:1px solid rgba(100,255,218,.1); padding:.8rem 2rem}
+  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); border-bottom:0; padding:.8rem 2rem}
 .topnav{display:flex; gap:22px; align-items:center}
 .topnav .num{color:var(--green); font-family:var(--mono); font-size:.9rem; margin-right:.25rem}
 .btn{border:1px solid var(--green); color:var(--green); border-radius:8px; padding:.6rem 1rem; font-weight:600}
 .btn:hover{background:rgba(100,255,218,.08)}
 
 /* ===== Hero ===== */
-.hero{padding:140px 0 80px}
-.pre{color:var(--green); font-family:var(--mono)}
-.title{color:var(--lightest-slate); font-size:clamp(40px, 8vw, 72px); font-weight:800; line-height:1.1; margin:.2rem 0}
-.subtitle{color:var(--light-slate); font-size:clamp(28px, 6vw, 48px); font-weight:700; margin:.4rem 0 1rem}
-.lead{max-width:65ch}
-.cta{margin-top:1.4rem}
+:root { --topbar-h: 68px; } /* altura aprox. de la barra superior */
 
-/* 1) Palabra dinámica en el hero */
-.accent { color: var(--green); }
-
-#rotatingWord{
-  display: inline-flex;            /* permite centrar el contenido */
-  width: 3.2ch;                    /* reserva espacio (DATA/TECH = 4 letras) */
-  justify-content: center;         /* centra horizontalmente */
-  text-align: center;
-  transition:
-    opacity .28s ease,
-    transform .28s cubic-bezier(.22,.61,.36,1),
-    filter .28s ease;
-  will-change: transform, opacity;
+/* Layout del hero: ocupa la pantalla y va un pelín más arriba */
+.hero{
+  min-height: calc(100vh - var(--topbar-h));  /* fallback */
+  display: grid;
+  align-content: center;        /* centra vertical */
+  transform: translateY(-4vh);  /* súbelo un poco (-3/-5vh para ajustar) */
+  padding: 0;
+  row-gap: .7rem;
+}
+@supports (height: 100svh){
+  .hero{ min-height: calc(100svh - var(--topbar-h)); } /* móvil moderno */
 }
 
-#rotatingWord.is-out{          /* estado de salida/entrada (crossfade + sutil slide+blur) */
+/* Tipografía/espaciado del bloque */
+.pre{
+  color: var(--green);
+  font-family: var(--mono);
+  margin: 0 0 .4rem;
+}
+.title{
+  color: var(--lightest-slate);
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 800;
+  line-height: 1.08;
+  margin: .2rem 0 .7rem;
+  text-wrap: balance;
+}
+.subtitle{
+  color: var(--light-slate);
+  font-size: clamp(28px, 6vw, 48px);
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0 0 1.1rem;
+  text-wrap: balance;
+}
+.hero .lead{
+  max-width: 65ch;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  text-wrap: pretty;
+}
+.cta{ margin-top: 1.2rem; }
+
+/* Palabra dinámica (si usas #rotatingWord) */
+.accent { color: var(--green); }
+#rotatingWord{
+  display: inline-flex;
+  width: 3.2ch;                 /* ajusta si cambias las palabras */
+  justify-content: center;
+  text-align: center;
+  transition: opacity .28s ease, transform .28s cubic-bezier(.22,.61,.36,1), filter .28s ease;
+  will-change: transform, opacity;
+}
+#rotatingWord.is-out{
   opacity: 0;
   transform: translateY(.35em) scale(.98);
   filter: blur(2px);
 }
 
-/* 2) Párrafo del hero justificado */
-.hero .lead{
-  text-align: justify;          /* alinea ambos márgenes */
-  text-justify: inter-word;     /* reparte espacios entre palabras */
-  hyphens: auto;                /* guiones automáticos si hace falta */
-  -webkit-hyphens: auto;
-  text-wrap: pretty;            /* microtipografía (si el navegador lo soporta) */
-}
-
-/* 3) Hero a pantalla completa (sin que se vea About) */
-:root{ --topbar-h: 72px; }      /* altura aproximada de tu header sticky */
-.hero{
-  /* centramos verticalmente el bloque del hero */
-  min-height: calc(100vh - var(--topbar-h));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  /* padding un poco menor para que el contenido quede centrado visualmente */
-  padding: 96px 0 64px;
-}
-
-/* En móviles modernos usa la unidad svh para evitar saltos por la barra del navegador */
-@supports (height: 100svh){
-  .hero{ min-height: calc(100svh - var(--topbar-h)); }
+/* Ajuste en pantallas muy bajas */
+@media (max-height: 700px){
+  .hero{ transform: translateY(-2vh); }
 }
 
 /* ===== Sections ===== */
-.section{padding:80px 0; border-top:1px solid rgba(204,214,246,.08)}
+.section{padding:80px 0; border-top:0}
 .section:first-of-type{border-top:0}
 .section-title{color:var(--lightest-slate); font-size:1.5rem; display:flex; align-items:center; gap:.8rem; margin:0 0 24px}
 .section-title span:first-child{color:var(--green); font-family:var(--mono); font-size:1.1rem}
@@ -152,4 +165,4 @@ a:hover{color:var(--green)}
 .contact-title{color:var(--lightest-slate); font-size:clamp(24px, 4vw, 36px); margin:.4rem 0 1rem}
 
 /* Footer */
-.footer{padding:40px 0; text-align:center; color:var(--slate); border-top:1px solid rgba(204,214,246,.08)}
+.footer{padding:40px 0; text-align:center; color:var(--slate); border-top:0}
