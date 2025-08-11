@@ -46,3 +46,45 @@ if (rot) {
     }, 220); // coincide con el transition del CSS
   }, 2000); // cambia cada 2s (ajusta a gusto)
 }
+
+// ===== Vanta Globe en el hero, con colores del tema =====
+(function () {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Helpers: lee variables CSS y convier­te HEX -> int
+  const css = getComputedStyle(document.documentElement);
+  const toInt = hex => parseInt(hex.replace('#',''), 16);
+
+  // Colores desde tus tokens (fallback a los del diseño)
+  const GREEN = (css.getPropertyValue('--green').trim() || '#64ffda');
+  const NAVY  = (css.getPropertyValue('--navy') .trim() || '#0a192f');
+
+  // Montamos en el contenedor del hero
+  const heroEl = document.querySelector('.hero');
+  if (!heroEl || !window.VANTA || !window.THREE) return;
+
+  // Inicia Vanta
+  const effect = VANTA.GLOBE({
+    el: heroEl,
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.0,
+    scaleMobile: 1.0,
+
+    // Estética: mismo verde para puntos y aristas
+    color: toInt(GREEN),       // puntos
+    color2: toInt(GREEN),      // líneas
+    backgroundColor: toInt(NAVY),
+
+    // Ajustes finos de look & rendimiento
+    size: 0.9,                 // tamaño del “punto” (0.6–1.2)
+  });
+
+  // Limpieza opcional (si alguna vez desmontas el hero)
+  window.addEventListener('beforeunload', () => {
+    try { effect?.destroy(); } catch(e){}
+  });
+})();
