@@ -85,7 +85,7 @@ a:hover{color:var(--green)}
   text-wrap: balance;
 }
 .hero .lead{
-  max-width: 64ch;
+  max-width: 63ch;
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
