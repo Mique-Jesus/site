@@ -117,6 +117,18 @@ a:hover{color:var(--green)}
   .hero{ transform: translateY(-2vh); }
 }
 
+/* el hero será el contenedor del canvas de Vanta */
+.hero{ position: relative; overflow: hidden; }
+
+/* el canvas que inyecta Vanta */
+.vanta-canvas{
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -1 !important;     /* detrás del contenido */
+  pointer-events: none !important; /* no bloquea clics en botones/enlaces */
+  opacity: .35;               /* intensidad global del efecto (ajusta 0.25–0.45) */
+}
+
 /* ===== Sections ===== */
 .section{padding:80px 0; border-top:0}
 .section:first-of-type{border-top:0}
