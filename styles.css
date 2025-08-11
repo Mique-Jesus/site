@@ -54,7 +54,7 @@ a:hover{color:var(--green)}
 .lead{max-width:65ch}
 .cta{margin-top:1.4rem}
 
-/* palabra dinámica en el hero */
+/* 1) Palabra dinámica en el hero */
 .accent { color: var(--green); }
 
 #rotatingWord{
@@ -73,6 +73,33 @@ a:hover{color:var(--green)}
   opacity: 0;
   transform: translateY(.35em) scale(.98);
   filter: blur(2px);
+}
+
+/* 2) Párrafo del hero justificado */
+.hero .lead{
+  text-align: justify;          /* alinea ambos márgenes */
+  text-justify: inter-word;     /* reparte espacios entre palabras */
+  hyphens: auto;                /* guiones automáticos si hace falta */
+  -webkit-hyphens: auto;
+  text-wrap: pretty;            /* microtipografía (si el navegador lo soporta) */
+}
+
+/* 3) Hero a pantalla completa (sin que se vea About) */
+:root{ --topbar-h: 72px; }      /* altura aproximada de tu header sticky */
+.hero{
+  /* centramos verticalmente el bloque del hero */
+  min-height: calc(100vh - var(--topbar-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* padding un poco menor para que el contenido quede centrado visualmente */
+  padding: 96px 0 64px;
+}
+
+/* En móviles modernos usa la unidad svh para evitar saltos por la barra del navegador */
+@supports (height: 100svh){
+  .hero{ min-height: calc(100svh - var(--topbar-h)); }
 }
 
 /* ===== Sections ===== */
