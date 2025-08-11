@@ -40,7 +40,7 @@ a:hover{color:var(--green)}
 
 /* ===== Topbar ===== */
 .topbar{position:sticky; top:0; z-index:9; display:flex; justify-content:space-between; align-items:center;
-  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); border-bottom:0; padding:.8rem 2rem}
+  backdrop-filter: blur(6px); background: rgba(10,25,47,.6); padding: 1.15rem 2rem}
 .topnav{display:flex; gap:22px; align-items:center}
 .topnav .num{color:var(--green); font-family:var(--mono); font-size:.9rem; margin-right:.25rem}
 .btn{border:1px solid var(--green); color:var(--green); border-radius:8px; padding:.6rem 1rem; font-weight:600}
@@ -91,6 +91,8 @@ a:hover{color:var(--green)}
   hyphens: auto;
   -webkit-hyphens: auto;
   text-wrap: pretty;
+  line-height: 1.6;             /* ⬅ más respiración */
+  letter-spacing: .005em;       /* sutil apertura */
 }
 .cta{ margin-top: 1.2rem; }
 
