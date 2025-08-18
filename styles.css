@@ -186,6 +186,17 @@ a:hover{color:var(--green)}
 .panel li{margin:.3rem 0}
 @media (max-width: 900px){ .tabs{grid-template-columns:1fr} .tablist{flex-direction:row; border-left:0; border-bottom:1px solid rgba(204,214,246,.15)} .tab{border-left:0; border-bottom:2px solid transparent} .tab.active{border-bottom-color:var(--green)} }
 
+/* Pequeñas banderas decorativas en tabs */
+.tab .flag{
+  width: 18px;
+  height: 12px;
+  margin-left: 8px;
+  vertical-align: -2px; /* alinea con el texto */
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(148,163,184,.15); /* borde sutil */
+  flex-shrink: 0;
+}
+
 /* Work / Projects */
 .project{position:relative; display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; align-items:center; margin:28px 0; background:transparent}
 .project.alt{grid-template-columns: 1fr 1.1fr}
