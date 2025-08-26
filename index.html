@@ -234,45 +234,86 @@
     <section id="work" class="section">
       <h2 class="section-title"><span>03.</span> Some Initiatives I’ve Lead</h2>
 
-      <!-- Featured project 1 (imagen izquierda, texto derecha) -->
-      <article class="project">
-        <div class="project-media img1" aria-hidden="true"></div>
-        <div class="project-copy">
-          <p class="eyebrow">Featured Project</p>
-          <h3>LDA on Congressional Votes</h3>
-          <p>Classifier using LDA to map roll-call votes; interpretability for communicable insights to non-technical audiences.</p>
-          <ul class="tags"><li>Python</li><li>Pandas</li><li>Scikit-learn</li></ul>
-          <div class="links">
-            <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-            <a href="https://medium.com/" target="_blank" rel="noopener" aria-label="External">External</a>
-          </div>
-        </div>
-      </article>
+      <!-- 1) Medium — Data & AI for the Public Good -->
+  <article class="project">
+    <div class="project-media">
+      <!-- Sube un thumbnail a /assets/medium-cover.jpg. Si no existe, cae en gradiente -->
+      <img src="assets/medium-cover.jpg"
+           alt="Articles on Medium by Miguel Jesús"
+           onerror="this.closest('.project-media').classList.add('img1'); this.remove();" />
+    </div>
+    <div class="project-copy">
+      <p class="eyebrow">Featured Project</p>
+      <h3>Medium Series</h3>
+      <p>
+        Personal series of short, practical articles on data science & AI with a public-interest angle.
+        I focus on actionable pieces—mixing concepts with hands-on code in <strong>Python</strong>, <strong>R</strong> and <strong>SQL</strong>—
+        so readers can reproduce examples and adapt them to social and government use-cases.
+      </p>
+      <ul class="tags">
+        <li>Writing</li><li>Public Sector</li><li>AI</li><li>Python</li><li>R</li><li>SQL</li>
+      </ul>
+      <div class="links">
+        <a href="https://medium.com/@miguel.jesus.cor" target="_blank" rel="noopener">View on Medium</a>
+      </div>
+    </div>
+  </article>
 
-      <!-- Featured project 2 (texto izquierda, imagen derecha) -->
-      <article class="project alt">
-        <div class="project-copy">
-          <p class="eyebrow">Featured Project</p>
-          <h3>Innovation Lab — Judicial Branch</h3>
-          <p>Lightweight lab model to deliver software/app initiatives (80% delivery), productivity metrics and pipeline for improvements.</p>
-          <ul class="tags"><li>Ops</li><li>Analytics</li><li>Change Mgmt</li></ul>
-          <div class="links">
-            <a href="#" aria-label="External">Case</a>
-          </div>
-        </div>
-        <div class="project-media img2" aria-hidden="true"></div>
-      </article>
+      <!-- 2) Innovation Lab — Judicial Branch (YouTube) -->
+  <article class="project alt">
+    <div class="project-copy">
+      <p class="eyebrow">Featured Project</p>
+      <h3>Innovation Lab — Judicial Branch</h3>
+      <p>
+        A lightweight innovation lab model to evaluate and scale software initiatives across courts.
+        It combined a robust <strong>MERL</strong> methodology for impact, with the operational orchestration needed
+        to coordinate multi-site pilots and measurement routines.
+      </p>
+      <ul class="tags">
+        <li>GovTech</li><li>MERL</li><li>Evaluation</li><li>Operations</li>
+      </ul>
+      <div class="links">
+        <!-- Reemplaza VIDEO_ID con el ID real de YouTube -->
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="project-media">
+      <div class="embed-16x9">
+        <!-- Reemplaza VIDEO_ID con el ID real de YouTube -->
+        <iframe
+          src="https://www.youtube.com/embed/VIDEO_ID"
+          title="Innovation Lab — Judicial Branch"
+          loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </article>
 
-      <!-- Featured project 3 -->
-      <article class="project">
-        <div class="project-media img3" aria-hidden="true"></div>
-        <div class="project-copy">
-          <p class="eyebrow">Featured Project</p>
-          <h3>Transparent Public Investment (TPI)</h3>
-          <p>Design of mixed-methods instruments and integrity indicators for regional partners; reporting and dissemination.</p>
-          <ul class="tags"><li>MEL</li><li>Survey design</li><li>Policy</li></ul>
-        </div>
-      </article>
+  <!-- 3) Datos Incorruptibles — public procurement alerts (video local) -->
+  <article class="project">
+    <div class="project-media">
+      <!-- Sube tu archivo a /assets/incorruptible.mp4 y un poster opcional -->
+      <video controls preload="metadata" playsinline poster="assets/incorruptible-poster.jpg">
+        <source src="assets/incorruptible.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="project-copy">
+      <p class="eyebrow">Featured Project</p>
+      <h3>Incorruptible Data — Procurement Alerting System</h3>
+      <p>
+        Prototype built during a Data Science Research Perú hackathon to flag potential
+        corruption risks in public procurement. We explored anomaly patterns and alert rules
+        to assist auditors with earlier, data-driven signals.
+      </p>
+      <ul class="tags">
+        <li>Anti-corruption</li><li>Procurement</li><li>Anomaly Detection</li><li>Dashboards</li>
+      </ul>
+      <div class="links">
+        <!-- Deja un enlace si luego publicas un write-up o repo -->
+        <a href="#" aria-label="Case">Case</a>
+      </div>
+    </div>
+  </article>
 
     </section>
 
