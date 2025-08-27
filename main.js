@@ -87,6 +87,7 @@ if (rot) {
   window.addEventListener('beforeunload', () => {
     try { effect?.destroy(); } catch(e){}
   });
+  })();
   
   // ===== Slider autoplay (Medium Series) =====
 (function(){
@@ -95,9 +96,11 @@ if (rot) {
 
   const slides = Array.from(slider.querySelectorAll('img'));
   const dots   = Array.from(slider.querySelectorAll('.slider-dots button'));
-  if(slides.length === 0) return;
+  if (slides.length) {
+    slides[0].classList.add('active'); // asegura que la 1ª se vea
+    dots[0]?.classList.add('active');
+  }
 
-  // estado
   let i = 0, timer = null;
   const AUTOPLAY_MS = 3500;
 
@@ -106,7 +109,6 @@ if (rot) {
     slides.forEach((img, idx)=> img.classList.toggle('active', idx === i));
     dots.forEach((d,   idx)=> d.classList.toggle('active', idx === i));
   }
-
   function play(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     stop();
@@ -114,24 +116,9 @@ if (rot) {
   }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
 
-  // init
-  slides[0].classList.add('active');
-  dots[0]?.classList.add('active');
   play();
-
-  // interacciones
   slider.addEventListener('mouseenter', stop);
   slider.addEventListener('mouseleave', play);
   document.addEventListener('visibilitychange', ()=> document.hidden ? stop() : play() );
-
-  // navegación por dots
   dots.forEach((btn, idx)=> btn.addEventListener('click', ()=> { show(idx); play(); }));
-
-  // teclado (izq/der) cuando el slider tiene foco
-  slider.tabIndex = 0;
-  slider.addEventListener('keydown', (e)=>{
-    if(e.key === 'ArrowRight') { show(i+1); play(); }
-    if(e.key === 'ArrowLeft')  { show(i-1); play(); }
-  });
 })();
-
