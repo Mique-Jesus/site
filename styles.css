@@ -243,6 +243,46 @@ a:hover{color:var(--green)}
   border:0;
 }
 
+/* Slider de imágenes para proyectos */
+.slider{
+  position: relative;
+  aspect-ratio: 16 / 9;      /* misma “caja” que los videos */
+  overflow: hidden;
+  border-radius: var(--radius, 12px);
+  border: 1px solid rgba(100,255,218,.18);
+  background: linear-gradient(180deg, #0f2a4d, #12325b);
+}
+.slider img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.slider img.active{ opacity: 1; transform: scale(1); }
+
+/* indicadores (puntos) */
+.slider-dots{
+  position: absolute; right: 10px; bottom: 10px;
+  display: flex; gap: 8px;
+}
+.slider-dots button{
+  width: 8px; height: 8px; border-radius: 999px; border: 0;
+  background: rgba(148,163,184,.45); cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease;
+}
+.slider-dots button.active{ background: var(--green); transform: scale(1.15); }
+
+.slider:hover img.active{ transform: scale(1.01); } /* micro-parallax */
+
+/* accesibilidad: si el usuario pide menos animación, sin autoplay */
+@media (prefers-reduced-motion: reduce){
+  .slider img{ transition: none; }
+}
+
 /* Contact */
 .contact{text-align:center}
 .contact-title{color:var(--lightest-slate); font-size:clamp(24px, 4vw, 36px); margin:.4rem 0 1rem}
