@@ -135,7 +135,7 @@ a:hover{color:var(--green)}
 .section-title{color:var(--lightest-slate); font-size:1.5rem; display:flex; align-items:center; gap:.8rem; margin:0 0 24px}
 .section-title span:first-child{color:var(--green); font-family:var(--mono); font-size:1.1rem}
 
-/* About */
+/*** About ***/
 .about-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:start}
 .about-text p{text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto; line-height: 1.6}
 .about-photo{position:relative; border-radius:var(--radius); padding:8px; border:1px solid rgba(100,255,218,.3)}
@@ -171,7 +171,21 @@ a:hover{color:var(--green)}
   .skills{ grid-template-columns: repeat(2, minmax(120px, 1fr)); }
 }
 
-/* Experience (tabs) */
+/* Enlace destacado siempre en verde (accent) */
+.accent-link{
+  color: var(--green) !important;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--green) 65%, transparent);
+  text-underline-offset: 2px;
+}
+.accent-link:hover,
+.accent-link:focus-visible{
+  text-decoration-color: var(--green);
+  filter: brightness(1.08);
+}
+
+/*** Experience (tabs) ***/
 .tabs{display:grid; grid-template-columns:240px 1fr; gap:24px}
 .tablist{display:flex; flex-direction:column; border-left:1px solid rgba(204,214,246,.15)}
 .tab{all:unset; cursor:pointer; padding:.8rem 1rem; border-left:2px solid transparent; color:var(--light-slate)}
@@ -197,7 +211,7 @@ a:hover{color:var(--green)}
   flex-shrink: 0;
 }
 
-/* Work / Projects */
+/*** Projects ***/
 .project{position:relative; display:grid; grid-template-columns: 1.1fr 1fr; gap:20px; align-items:center; margin:28px 0; background:transparent}
 .project.alt{grid-template-columns: 1fr 1.1fr}
 .project-media{height:280px; border-radius:var(--radius); background:linear-gradient(180deg,#0f2a4d,#12325b); border:1px solid rgba(100,255,218,.18)}
