@@ -175,7 +175,7 @@ a:hover{color:var(--green)}
 .accent-link{
   color: var(--green) !important;
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: color-mix(in srgb, var(--green) 65%, transparent);
   text-underline-offset: 2px;
 }
