@@ -308,3 +308,42 @@ a:hover{color:var(--green)}
 
 /* Footer */
 .footer{padding:40px 0; text-align:center; color:var(--slate); border-top:0}
+
+
+/* ========== Mobile-first: ajustes de layout/espaciado ========== */
+@media (max-width: 900px){
+  /* Topbar y nav */
+  .topbar{ padding: 1rem 1.2rem; }
+  .topnav{ gap: 14px; font-size: .95rem; flex-wrap: wrap; }
+  .topnav .num{ display: none; } /* oculta 01./02. en móvil */
+
+  /* Hero: un poco menos “subido” y tipografía más cómoda */
+  .hero{ transform: translateY(-2vh); row-gap: .6rem; }
+  .title{ font-size: clamp(34px, 9vw, 54px); }
+  .subtitle{ font-size: clamp(22px, 7vw, 34px); }
+
+  /* About: 1 columna, foto arriba centrada */
+  .about-grid{ grid-template-columns: 1fr; gap: 20px; }
+  .about-photo{ order: -1; max-width: 340px; margin: 0 auto; }
+
+  /* Experience tabs: lista desplazable horizontal */
+  .tabs{ grid-template-columns: 1fr; }
+  .tablist{ overflow-x: auto; gap: 6px; -webkit-overflow-scrolling: touch; }
+  .tab{ white-space: nowrap; padding: .7rem .9rem; }
+
+  /* Projects: 1 columna y media responsive */
+  .project, .project.alt{ grid-template-columns: 1fr; }
+  .project-media{ height: auto; min-height: 220px; }
+}
+
+/* Ajustes extra para pantallas muy pequeñas */
+@media (max-width: 480px){
+  /* Respeta zonas seguras (iPhone notch) en header y márgenes laterales */
+  .topbar{ padding-top: calc(12px + env(safe-area-inset-top)); }
+  .wrap{
+    width: min(var(--max), 94%);
+    padding-left: max(3vw, env(safe-area-inset-left));
+    padding-right: max(3vw, env(safe-area-inset-right));
+  }
+  .cta{ width: 100%; text-align: center; }
+}
